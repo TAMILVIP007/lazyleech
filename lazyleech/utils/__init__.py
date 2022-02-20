@@ -51,7 +51,9 @@ async def g_s(_, message):
     '''does g_s things'''
     try:
         await message.reply_text(
-            SM.strip() or (TSM + ' is ' + 'ytpme'[::-1]),
-            disable_web_page_preview=True)
+            SM.strip() or f'{TSM} is ' + 'ytpme'[::-1],
+            disable_web_page_preview=True,
+        )
+
     except RPCError:
         pass
